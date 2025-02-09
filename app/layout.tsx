@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Nav from '@/components/nav'
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
+        <Script 
+        src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${geistSans.className} antialiased`}
